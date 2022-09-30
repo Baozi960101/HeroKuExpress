@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include("../template/head.ejs") %>
+  </head>
+  <body>
+    <%- include("../template/navBar.ejs") %>
+    <% if( registerError.length !== 0 ){ %>
+        <div class="alert alert-danger" role="alert">
+            <%= registerError %>
+        </div>
+    <% } %> 
+    <form class="row g-3 align-items-center container" method="POST" accept="/login">
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="username">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="password">
+            </div>
+          </div>
+      <div><input type="submit" class="btn btn-primary"/></div>
+    </form>
+  </body>
+</html>
+
+
+
+
+  

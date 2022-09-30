@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include("../template/head.ejs") %> 
+    </head>
+    <body>
+        <%- include("../template/navBar.ejs") %>
+            <form class="row g-3 align-items-center container" method="POST" accept="/update_comment/<%= result.id %>">
+                <div class="mb-3 row">
+                    <div class="col-sm-10">
+                    <textarea rows="10" class="form-control" name="content"><%= result.content%>
+                    </textarea>  
+                    </div>
+                  </div>
+              <div><input type="submit" class="btn btn-primary"/></div>
+            </form>
+        <% if( registerError.length !== 0 ){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= registerError %>
+            </div>
+        <% } %> 
+    </body>
+</html>
+
+
+
+    
+
+ 
+
+
+
+
+
+ 
+

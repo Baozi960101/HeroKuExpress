@@ -1,0 +1,14 @@
+<nav class="navbar bg-light mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">留言板</a>
+      <div>
+        <% if( username ){ %>
+            <a class="btn btn-outline-success" href="/logout">登出</a>
+        <% }else{ %>
+            <a class="btn btn-outline-success" href="/login">請登入</a>
+            <a class="btn btn-outline-success" href="/register">註冊</a>
+        <% } %>
+      </div>
+    </div>
+</nav>
+

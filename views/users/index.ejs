@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include("../template/head.ejs") %> 
+    </head>
+    <body>
+        <%- include("../template/navBar.ejs") %>
+        <% if( username ){ %>
+            <form class="row g-3 align-items-center container" method="POST" accept="/">
+                <div class="mb-3 row">
+                    <div class="col-sm-10">
+                    <textarea rows="10" class="form-control" name="content"></textarea>  
+                    </div>
+                  </div>
+              <div><input type="submit" class="btn btn-primary"/></div>
+            </form>
+        <% } %>
+        <% comments.forEach(function(comment) { %>
+            <div class="card" style="width: 18rem; margin-top: 10px;">
+              <div class="card-body">
+                <h5 class="card-title"><%= comment.User.nickname %></h5>
+                <p class="card-text"><%= comment.content %></p>
+                <% if (username === comment.User.username) { %>
+                <a class="card-link" href="/update_comment/<%= comment.id %>">編輯</a>
+                <a class="card-link" href="/delete_comment/<%= comment.id %>">刪除</a>
+              <% } %>
+              </div>
+            </div>
+        <% }) %>
+    </body>
+</html>
+
+
+
+
+    
+
+ 
+

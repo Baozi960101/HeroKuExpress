@@ -1,0 +1,17 @@
+<h1>addTodos</h1>
+
+<a href="/todos">Todo</a>
+<a href="/login">登入</a>
+
+<% if(isLogin) { %> 
+    你已經登入 <a href="/loginOut">登出</a>
+<% } else { %>
+    你還沒登入
+<% } %>
+
+
+
+<form method="POST" action="/todos">
+    Content : <input type="text" name="content">
+    <input type="submit" />
+</form>
