@@ -4,8 +4,7 @@
     "password": "root",
     "database": "app",
     "host": "localhost",
-    "dialect": "mysql",
-    "use_env_variable":"CLEARDB_DATABASE_URL"
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
