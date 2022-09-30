@@ -5,7 +5,7 @@ const usersController = require("./controllers/users");
 const commentController = require("./controllers/comment");
 const session = require("express-session");
 const flash = require("connect-flash");
-const PORT = process.env.PORT || 5001;
+const port = process.env.PORT || 5001;
 
 
 app.set("view engine", "ejs");
@@ -58,5 +58,5 @@ app.post("/update_comment/:id", commentController.update);
 //   }
 // });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
 });
